@@ -155,3 +155,33 @@ Processing by MoviesController#index as HTML
   [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
   Rendered movies/index.html.haml within layouts/application (3.4ms)
 Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 50.24.113.151 at 2019-03-05 07:43:15 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 21ms (Views: 17.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/movies/1" for 50.24.113.151 at 2019-03-05 07:43:16 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/similar_movies/Aladdin" for 50.24.113.151 at 2019-03-05 07:43:17 +0000
+Processing by MoviesController#similar_movies as HTML
+  Parameters: {"title"=>"Aladdin"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "Aladdin"]]
+Redirected to https://6268926ee11f4f5bb7468e6ea90953ae.vfs.cloud9.us-east-2.amazonaws.com/movies
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 50.24.113.151 at 2019-03-05 07:43:18 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.2ms)
