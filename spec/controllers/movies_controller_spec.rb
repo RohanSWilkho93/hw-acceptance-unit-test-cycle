@@ -3,8 +3,8 @@ require 'rails_helper'
 describe MoviesController do
   describe 'Search movies by the same director' do
     it 'should call Movie.similar_movies' do
-      expect(Movie).to receive(:similar_find).with('Aladdin')
-      get :similar_movies, { title: 'Aladdin' }
+      expect(Movie).to receive(:similar_find).with('Star Wars')
+      get :similar_movies, { title: 'Star Wars' }
     end
     it 'should assign similar movies if director exists' do
       movies = ['Seven', 'The Social Network']
