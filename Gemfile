@@ -7,7 +7,7 @@ gem 'rails', '4.2.10'
 
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
-  gem 'sqlite3'
+  gem 'pg', '~> 0.21'
   gem 'byebug'
   gem 'database_cleaner', '1.4.1'
   gem 'capybara', '2.4.4'
@@ -23,7 +23,7 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '~> 0.20'
+  gem 'pg', '~> 0.21'
 end
 
 # Gems used only for assets and not required
