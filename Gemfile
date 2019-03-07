@@ -14,15 +14,16 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails', '3.7.2'
   gem 'ZenTest', '4.11.0'
-  gem 'simplecov', :require => false
 end
 
 group :test do
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
+  gem 'simplecov', :require => false
 end
+
 group :production do
-  gem 'pg'
+  gem 'pg', '~> 0.20'
 end
 
 # Gems used only for assets and not required
